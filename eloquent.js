@@ -37,3 +37,37 @@ function isEven(number){
 console.log(isEven(50));
 console.log(isEven(75));
 console.log(isEven(-1));
+
+// Ex. 3 Counting
+
+// function countBs(string){
+//     var count = 0;
+//     for (var i = 0; i < string.length; i++){
+//         if(string.charAt(i) === "B"){
+//         count += 1;
+//         }
+//     }
+//         return count;
+// }
+
+// countBs("BBCC WorBBld");
+
+
+
+function countBs(string) {
+    return countChar(string, "B");
+}
+
+
+function countChar(string, char){
+    var count = 0; //sets counter to 0
+    for (var i = 0; i < string.length; i++){ //loops through length of string and assigns i to index of string
+        if(string.charAt(i) === char){ //compares i with input
+        count++; // counts total
+        }
+    }
+        return count;
+}
+
+console.log(countChar("BBC World SerivBce Radio", "B"));
+console.log(countBs("Bouncing Betty"));
